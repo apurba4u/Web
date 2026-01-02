@@ -1,0 +1,26 @@
+.kendrio {
+  display: flex;
+  border: 2px solid yellowgreen;
+  border-radius: 10%;
+}
+.item {
+  border: 1px solid black;
+  border-radius: 10%;
+  text-align: center;
+  font-weight: 500;
+  margin: 15px;
+  padding: 10px;
+}
+input[type="text"] {
+  color: green;
+}
+input[type="email"] {
+  color: blue;
+}
+input[type="text"] {
+  color: red;
+}
+.display {
+  display: none; 
+  visibility: hidden; 
+}
