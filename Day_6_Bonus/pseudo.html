@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pseudo</title>
+  <style>
+    h3 {
+      color: peru;
+    }
+    h3:hover {
+      color: tomato;
+    }
+    input:focus {
+      color: blue;
+      outline: 0;
+      /* Type korle color blue oibo */
+    }
+    a:visited {
+      color: red;
+    }
+    li:last-child {
+      background-color: red;
+    }
+    li:first-child {
+      background-color: blue;
+    }
+    li:nth-child(2n) {
+      background-color: gray;
+      /* For Even */
+    }
+    li:nth-child(3n + 1) {
+      color: purple;
+      /* For 3 er gunitok + 1 Value */
+    }
+  </style>
+</head>
+<body>
+  <h3>My Heading</h3>
+  <input type="text">
+  <input type="text">
+  <input type="text">
+  <a href="https://www.google.com/" target="_blank">Google</a>
+  <a href="#">Nothing</a>
+  <ul>
+    <li>Apple</li>
+    <li>Apple</li>
+    <li>Apple</li>
+    <li>Apple</li>
+    <li>Apple</li>
+    <li>Apple</li>
+    <li>Apple</li>
+    <li>Apple</li>
+    <li>Apple</li>
+  </ul>
+</body>
+</html>
