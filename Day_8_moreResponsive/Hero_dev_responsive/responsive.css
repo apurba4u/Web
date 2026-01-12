@@ -1,0 +1,16 @@
+/* Web First Design */
+
+/* Laptop Devivce */
+@media screen and (max-width: 1200px) {}
+
+/* Tablet Device */
+@media screen and (max-width: 992px) {}
+
+/* Big Mobile Device */
+@media screen and (max-width: 768px) {}
+
+/* Normal Device */
+@media screen and (max-width: 576px) {}
+
+/* Device Specific Media Query */
+@media screen and (min-width: 577px) and (max-width: 992px) {}

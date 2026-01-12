@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Layout</title>
+  <style>
+    .container {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 200px) repeat(2, 50px);
+    }
+    .box {
+      background-color: gray;
+      padding: 10px;
+      text-align: center;
+    }
+    .sidebar {
+      grid-row: span 5;
+    }
+    .footer {
+      grid-column: span 3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box sidebar">Box - 1</div>
+    <div class="box">Box - 2</div>
+    <div class="box">Box - 3</div>
+    <div class="box">Box - 4</div>
+    <div class="box">Box - 5</div>
+    <div class="box">Box - 6</div>
+    <div class="box">Box - 7</div>
+    <div class="box">Box - 8</div>
+    <div class="box">Box - 9</div>
+    <div class="box">Box - 10</div>
+    <div class="box footer">Box - 11</div>
+    <div class="box footer">Box - 12</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Gallery</title>
+  <style>
+    .container {
+      display: grid;
+      gap: 3px;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(6, 200px);
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    .big-layout {
+      grid-column: span 6;
+      grid-row: span 2;
+    }
+    .normal-layout {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    .wide-layout {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+    .last-layout {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+    @media screen and (max-width: 576px){
+      .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3px;
+      }
+      .normal-layout, .big-layout, .wide-layout, 
+      .last-layout {
+        grid-row: span 1;
+        grid-column: span 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="big-layout">
+      <img src="./images/A.jpg">
+    </div>
+    <div class="normal-layout">
+      <img src="./images/B.jpg">
+    </div>
+    <div class="normal-layout">
+      <img src="./images/C.jpg">
+    </div>
+    <div class="wide-layout">
+      <img src="./images/D.jpg">
+    </div>
+    <div class="wide-layout">
+      <img src="./images/E.jpg">
+    </div>
+    <div class="normal-layout">
+      <img src="./images/F.jpg">
+    </div>
+    <div class="last-layout">
+      <img src="./images/G.jpg">
+    </div>
+    <div class="last-layout">
+      <img src="./images/G.jpg">
+    </div>
+    <div class="normal-layout">
+      <img src="./images/I.jpg">
+    </div>
+    <div class="last-layout">
+      <img src="./images/G.jpg">
+    </div>
+    <div class="last-layout">
+      <img src="./images/G.jpg">
+    </div>
+  </div>
+</body>
+</html>
