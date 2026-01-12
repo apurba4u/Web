@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: #111;
+}
+nav li {
+  list-style: none;
+  display: inline;
+}
+nav li:hover {
+  background-color: gray;
+}
+nav li a {
+  text-decoration: none;
+}
+.size {
+  height: 150px;
+  width: 300px;
+}
+footer  {
+  text-align: center;
+}

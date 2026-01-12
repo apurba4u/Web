@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Website</title>
+  <style>
+    body {
+      border: 1px solid skyblue;
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+    .image-container {
+      display: flex;
+    }
+    .image-container div {
+      width: 50%;
+      border-right: 1px solid red;
+    }
+    .image-container img {
+      width: 100%;
+    }
+    @media screen and (max-width: 576px) {
+      .image-container {
+        flex-direction: column-reverse;
+      }
+      .image-container div {
+        width: 100%;
+        border: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Responsive Website</h1>
+  <ol>
+    <l>ViewPort Meta Tag</l>
+    <l>Css Relative Unit</l>
+    <l>Body max-width and horizontal center align</l>
+    <l>image Fluid</l>
+    <l>Two column flex and use media query with flex direction column</l>
+    <l>Multi column: Grid Layout</l>
+    <l>Menu Responsive: will nedd Javascript</l>
+  </ol>
+
+  <main>
+    <div class="image-container">
+      <div>
+        <img src="/asstes/food.png">
+      </div>
+      <div>
+        <img src="/asstes/BD.png">
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example3</title>
+  <style>
+    .container {
+      display: grid;
+      width: 100vw;
+      height: 100vh;
+      grid-template-columns: repeat(2,1fr);
+    }
+    .box1 {
+      width: 40vw;
+      border: 1px solid;
+      text-align: center;
+    }
+    .box2 {
+      width: 60vw;
+      border: 1px solid;
+      text-align: center;
+    }
+    @media screen and (max-width: 576px) {
+      .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+      }
+      .box1, .box2 {
+        width: 100vw;
+        text-align: center;
+        border: 1px solid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box1">Left</div>
+    <div class="box2">Right</div>
+  </div>
+</body>
+</html>

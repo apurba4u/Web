@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example1</title>
+  <style>
+    .container{
+      display: grid;
+      height: 800px;
+      width: 800px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr 2fr 2fr 1fr;
+      gap: 10px;
+    }
+    .br {
+      border: 1px solid;
+      text-align: center;
+    }
+    .header {
+      grid-column: 1/4;
+    }
+    .sidebar {
+      grid-column: 1/2;
+      grid-row: 2/4;
+    }
+    .footer {
+      grid-column: 1/4;
+      grid-row: 4/5;
+    }
+    .content1 {
+      grid-column: 2/4;
+      grid-row: 2/3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header br">Header</div>
+    <div class="sidebar br">SideBar</div>
+    <div class="content1 br">Content1</div>
+    <div class="content2 br">Content2</div>
+    <div class="content3 br">Content3</div>
+    <div class="footer br">Footer</div>
+  </div>
+</body>
+</html> 
