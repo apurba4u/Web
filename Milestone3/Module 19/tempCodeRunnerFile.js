@@ -1,0 +1,1 @@
+(i.starting + i.increment) * i.experience

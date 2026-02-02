@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transition</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      border: 2px solid tomato;
+      background-color: peachpuff;
+      /* property name | duration */
+    /* property name | duration | delay */
+    /* property name | duration | easing function */
+    /* property name | duration | easing function | delay */
+    /* transition: width 5s linear 2s, background-color 3s ease-in 2s; */
+    transition: transform 3s 2s;
+    }
+    .box:hover {
+      /* width: 400px;
+      background-color: red; */
+      transform: scale(1.5) rotate(45deg) translateX(150px);
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>Transform: Change The Shape => mane ki property use korbe.</li>
+    <li>Translate: Move element x , y axis or both together</li>
+    <li>Transition: How long it will take to do the change of the shape. => mane kotokkon solbo, kun property er upor apply oibo, style kiriokom takbo?</li>
+  </ul>
+  <div class="box">Box - 1</div>
+  <div class="box">Box - 2</div>
+  <div class="box">Box - 3</div>
+</body>
+</html>

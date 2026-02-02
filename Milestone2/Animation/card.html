@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>CSS Neon Card with Rotating Gradient Border</title>
+  <style>
+    html,
+    body {
+      height: 100vh;
+    }
+    .card::after {
+      position: absolute;
+      content: '';
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(#F7E93F,#FB09B4,#9100F8,#F7E93F,#FB09B4,#9100F8);
+      animation: rotate 1s linear infinite;
+    }
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    .card::before {
+      content: '';
+      background: conic-gradient(rgba(247, 233, 63,0.),
+         rgba(251, 9, 180, .51),rgba(145, 0, 248, 1));
+      position: absolute;
+      inset: 5px;
+      border-radius: 15px;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body class="bg-[#1f1f1f] grid place-content-center">
+  <div class="card relative h-[350px] w-[300px] bg-[linear-gradient(59deg,#F7E93F_0%,#FB09B4_51%,#9100F8_100%,#F7E93F_0%,#FB09B4_51%,#9100F8_100%)] text-[#e3e3e3] rounded-2xl flex justify-center items-center overflow-hidden">
+    <h2 class="text-5xl font-medium relative z-2 uppercase">Card</h2>
+  </div>
+</body>
+</html>

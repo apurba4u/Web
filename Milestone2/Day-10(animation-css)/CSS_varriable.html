@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Varriable</title>
+  <style>
+    :root {
+      --primary-color: steelblue;
+      --secondary-color: blue;
+      --font-size: 1.1rem;
+    }
+    .box {
+      border: 2px solid steelblue;
+      width: calc(100% - 300px);
+    }
+    h1 {
+      color: var(--primary-color);
+    }
+    h5 {
+      background-color: var(--secondary-color);
+    }
+    .box p {
+      color: var(--primary-color);
+      font-size: var(--font-size);
+    }
+
+    .sidebar {
+      background-color: lightgray;
+    }
+    .content {
+      background-color: lightskyblue;
+    }
+    .container {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 300px calc(100% - 300px - 20px);
+      grid-template-rows: 40vh;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Custom Properties</h1>
+  <h5>Also Commonly known as CSS Varriables</h5>
+  <div class="box">
+    <h3>I'm doing something</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, molestias illum tenetur omnis ducimus soluta cumque atque alias, sed praesentium esse, illo ullam. Voluptatem ad, rerum repudiandae fugiat temporibus sit.</p>
+  </div>
+
+  <div class="container">
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Main Content</div>
+  </div>
+</body>
+</html>
