@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>More Events</title>
+</head>
+<body>
+  <button id="btn-mouse">Micky mouse minnie</button>
+  <input type="text" id="user-name" placeholder="your name">
+  <input type="text" id="user-email" placeholder="your email">
+  <script>
+
+    // Button
+    // document.querySelector("#btn-mouse").addEventListener('mouseenter', () => {
+    //   console.log('Event Trigerred');
+    // })
+    // document.querySelector("#btn-mouse").addEventListener('mousemove', () => {
+    //   console.log('Event Trigerred');
+    // })
+    document.querySelector("#btn-mouse").addEventListener('mouseout', () => {
+      console.log('Event Trigerred');
+    })
+
+    // Input
+    //focus --> Kaj shuru
+    document.querySelector('#user-name').addEventListener('focus', () => {
+      console.log('User about to write name');
+    })
+    document.querySelector('#user-email').addEventListener('focus', () => {
+      console.log('User about to write email');
+    })
+    //blur --> Kaj sesh
+    document.querySelector('#user-name').addEventListener('blur', () => {
+      console.log('User done with write name');
+    })
+    document.querySelector('#user-email').addEventListener('blur', () => {
+      console.log('User done with write email');
+    })
+
+    // name field ki lekha hoyese sate sate show
+    // keydown e sesh er value betito baki value gula ashe
+    // document.querySelector('#user-name').addEventListener('keydown', (elem) => {
+    //   console.log(`typing....   ${elem.target.value}`);
+    // })
+
+    // Keyup --> shob value ashe
+    document.querySelector('#user-name').addEventListener('keyup', (elem) => {
+      console.log(`typing....   ${elem.target.value}`);
+    })
+  </script>
+</body>
+</html>

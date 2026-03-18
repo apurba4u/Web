@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Bubbling</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Now Display";
+  color: white;
+  list-style-type: disc;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+}
+ul {
+  padding: 0 30px;
+}
+
+.lt {
+  text-decoration: line-through;
+}
+  </style>
+</head>
+<body>
+  <ul>
+    <li>Apple</li>
+    <li>Orange</li>
+    <li>Guava</li>
+    <li>Banana</li>
+    <li>JackFruit</li>
+  </ul>
+  <script src="./EventBubbling.js"></script>
+</body>
+</html>

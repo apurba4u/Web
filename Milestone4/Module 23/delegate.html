@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Delegate</title>
+</head>
+<body>
+  <h1>Explore the concept of Event Delegate</h1>
+  <ol id="item-list">
+    <li class="item">My Awesome Item 1</li>
+    <li class="item">My Awesome Item 2</li>
+    <li class="item">My Awesome Item 3</li>
+    <li class="item">My Awesome Item 4</li>
+    <li class="item">My Awesome Item 5</li>
+    <li class="item">My Awesome Item 6</li>
+  </ol>
+  <button id="btn-add-item">Add new item</button>
+  <script>
+
+    // eikhane common child gular modde gayeb option apply korsilam
+    // const items = document.getElementsByClassName('item')
+    // // console.log(items);
+    // for (const item of items) {
+    //   // console.log(item);
+    //   item.addEventListener('click', (elem) => {
+    //     // console.log(elem.target.parentNode); // check korlam parent ke
+    //     elem.target.parentNode.removeChild(elem.target) // jetare select kormu oitai gayeb
+    //   })
+    // }
+
+    document.getElementById('item-list').addEventListener('click', (elem) => {
+      elem.target.parentNode.removeChild(elem.target)
+    })
+    document.getElementById('btn-add-item').addEventListener('click', () => {
+      // console.log('Button Clicked');
+
+      // parentto be added to
+      const ol = document.getElementById('item-list')
+
+      // new item
+      const li = document.createElement('li')
+      li.textContent = `Brand new item just added`
+
+      // child add to the parent
+      ol.appendChild(li)
+    })
+  </script>
+</body>
+</html>

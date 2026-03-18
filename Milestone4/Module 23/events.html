@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Handler</title>
+</head>
+<body>
+  <h1 id="page-title">Event Handler</h1>
+  <button id="btn-update-title">Update Title</button>
+  <!-- Example 1 -->
+  <script>
+    document.getElementById('btn-update-title').addEventListener('click', () => {
+      console.log('Btn clicked');
+      const pageTitleElement = document.getElementById('page-title')
+      pageTitleElement.innerText = 'Updated Text'
+    })
+  </script>
+  <br>
+
+  <!-- Example 2 -->
+  <p class="user-info">No User</p>
+  <button id="btn-login">Login</button>
+  <script>
+    document.querySelector("#btn-login").addEventListener('click', () => {
+      // console.log('Login Button Clicked');
+      document.querySelector('.user-info').textContent = 'User Login Done, xd!'
+    })
+  </script>
+  <br>
+  <br>
+  <br>
+
+  <p id="name">No Name</p>
+  <input type="text" id="input-name" placeholder="Your Name">
+  <button id="btn-update">Update</button>
+  <script>
+    document.querySelector("#btn-update").addEventListener('click', () => {
+      console.log('Update Button Clicked');
+      const nameInput = document.querySelector('#input-name')
+      const name = nameInput.value
+      document.getElementById('name').textContent = name
+    })
+  </script>
+  <script src="./handler.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom Events</title>
+</head>
+<body>
+  <h1>Doma Dom Events</h1>
+
+  <!-- Option 1 for event handler -->
+  <button onclick="console.log('Clicked');">Click Me</button>
+  <button ondblclick="console.log('Double Clicked');">Click Me Another</button>
+  <!-- Eivabe Likhle clg er modde single qutation use korte hobe -->
+
+  <br>
+
+  <!-- Option 2 for add event handler -->
+  <button onclick="makeYellow()">Make Yellow</button>
+  <button onclick="darkMode()">Make Dark Mode</button>
+  <script>
+    function makeYellow() {
+      document.body.style.backgroundColor = 'yellow'
+    }
+    function darkMode() {
+      document.body.style.backgroundColor = 'black'
+      document.body.style.color = 'white'
+    }
+    
+  </script>
+  <br>
+
+  <!-- Option 3:  get element by id then set onclick on a function-->
+  <button id="btn-make-blue">Make Blue</button>
+  <!-- Method 1 -->
+  <script>
+    const btnMakeBlue = document.getElementById('btn-make-blue')
+    btnMakeBlue.onclick = () => {
+      document.body.style.backgroundColor = 'blue'
+      document.body.style.color = 'red'
+    }
+  </script>
+  <button id="btn-make-purple">Make purple</button>
+  <!-- Method 2 -->
+  <script>
+    const btnMakePurple = document.getElementById('btn-make-purple')
+    btnMakePurple.onclick = makePurple
+
+    function makePurple() {
+      document.body.style.backgroundColor = 'purple'
+    }
+  </script>
+  <br>
+
+  <!-- option 4 : addEventListener() -->
+  <button id="btn-make-green">Make Green</button>
+  <button id="btn-make-brown">Make Brown</button>
+  <script>
+    // Method 1
+    document.getElementById('btn-make-green').addEventListener('click',makeGreen)
+    function makeGreen() {
+      document.body.style.backgroundColor = 'green'
+    }
+    // Method 2
+    document.getElementById('btn-make-brown').addEventListener('click', () => {
+      document.body.style.backgroundColor = '#FF9644'
+    })
+  </script>
+  <script src="./events.js"></script>
+</body>
+</html>
